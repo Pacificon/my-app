@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import './App.css';
 import Alert from './components/Alert';
-import About from './components/About';
+// import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React from "react";
-import {
-  BrowserRouter as Router,
-  // Switch,
-  Route,
-  Routes,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   // Switch,
+//   Route,
+//   Routes,
+// } from "react-router-dom";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -117,20 +117,20 @@ function App() {
   return (
     <>{/* this is called fragment */}
       {/* <Navbar title="Taskman2" aboutText="about Taskman1 " /> */}
-      <Router>
-        <Navbar title="Taskman" mode={mode} toggleBlack={toggleBlack} toggleLight={toggleLight} toggleCyan={toggleCyan} toggleBlue={toggleBlue} toggleYellow={toggleYellow} toggleGreen={toggleGreen} toggleDark={toggleDark} toggleRed={toggleRed} />
-        <Alert alert={alert} />
-        <div className="container my-3">
-          <Routes>
-            <Route exact path="/about">
-              element={<About />}
-            </Route>
-            <Route exact path="/">
-              element={<TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />}
-            </Route>
-          </Routes>
-        </div>
-      </Router>
+      {/* <Router> */}
+      <Navbar title="Taskman" mode={mode} toggleBlack={toggleBlack} toggleLight={toggleLight} toggleCyan={toggleCyan} toggleBlue={toggleBlue} toggleYellow={toggleYellow} toggleGreen={toggleGreen} toggleDark={toggleDark} toggleRed={toggleRed} />
+      <Alert alert={alert} />
+      <div className="container my-3">
+        {/* <Routes> */}
+        {/* <Route exact path="/about"> */}
+        {/* element={<About />} */}
+        {/* </Route> */}
+        {/* <Route exact path="/"> */}
+        <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
+        {/* </Route> */}
+        {/* </Routes> */}
+      </div>
+      {/* </Router> */}
     </>
   );
 }
