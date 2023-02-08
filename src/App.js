@@ -43,28 +43,28 @@ function App() {
       setMode('blue')
     document.body.style.backgroundColor = "blue";
     showAlert("Blue Mode has been enabled", "success");
-    document.title = "Taskman-Blue Mode";
+    // document.title = "Taskman-Blue Mode";
   }
   const toggleYellow = () => {
     if (mode !== 'yellow')
       setMode('yellow')
     document.body.style.backgroundColor = "yellow";
     showAlert("Yellow Mode has been enabled", "success");
-    document.title = "Taskman-Yellows Mode";
+    // document.title = "Taskman-Yellows Mode";
   }
   const toggleGreen = () => {
     if (mode !== 'green')
       setMode('green')
     document.body.style.backgroundColor = "green";
     showAlert("Green Mode has been enabled", "success");
-    document.title = "Taskman-Green Mode";
+    // document.title = "Taskman-Green Mode";
   }
   const toggleDark = () => {
     if (mode !== 'grey')
       setMode('grey')
     document.body.style.backgroundColor = "grey";
     showAlert("Grey Mode has been enabled", "success");
-    document.title = "Taskman-Grey Mode";
+    // document.title = "Taskman-Grey Mode";
     // setInterval(() => {
     //   document.title = 'Taskman is amazing'; bad practice 
     // }, 2000);
@@ -78,25 +78,25 @@ function App() {
       setMode('red')
     document.body.style.backgroundColor = "red";
     showAlert("Red Mode has been enabled", "success");
-    document.title = "Taskman-Red Mode";
-    setInterval(() => {
-      document.title = 'Taskman is amazing';
-    }, 2000);
-    setInterval(() => {
-      document.title = 'Install taskman now';
-    }, 1500);
+    // document.title = "Taskman-Red Mode";
+    // setInterval(() => {
+    //   // document.title = 'Taskman is amazing';
+    // }, 2000);
+    // setInterval(() => {
+    //   document.title = 'Install taskman now';
+    // }, 1500);
   }
   const toggleCyan = () => {
     if (mode !== 'cyan')
       setMode('cyan')
     document.body.style.backgroundColor = "cyan";
     showAlert("Cyan Mode has been enabled", "success");
-    document.title = "Taskman-Cyan Mode";
+    // document.title = "Taskman-Cyan Mode";
     setInterval(() => {
       document.title = 'Taskman is amazing';
     }, 2000);
     setInterval(() => {
-      document.title = 'Install taskman now';
+      // document.title = 'Install taskman now';
     }, 1500);
   }
   const toggleLight = () => {
@@ -104,7 +104,7 @@ function App() {
       setMode('white')
     document.body.style.backgroundColor = "white";
     showAlert("Light Mode has been enabled", "success");
-    document.title = "Taskman-White Mode";
+    // document.title = "Taskman-White Mode";
 
   }
   const toggleBlack = () => {
@@ -112,21 +112,23 @@ function App() {
       setMode('black')
     document.body.style.backgroundColor = "black";
     showAlert("Black Mode has been enabled", "success");
-    document.title = "Taskman-Black Mode";
+
+    // document.title = "Taskman-Black Mode";
   }
   return (
     <>{/* this is called fragment */}
       {/* <Navbar title="Taskman2" aboutText="about Taskman1 " /> */}
       {/* <Router> */}
-      <Navbar title="Taskman" mode={mode} toggleBlack={toggleBlack} toggleLight={toggleLight} toggleCyan={toggleCyan} toggleBlue={toggleBlue} toggleYellow={toggleYellow} toggleGreen={toggleGreen} toggleDark={toggleDark} toggleRed={toggleRed} />
-      <Alert alert={alert} />
+      <div style={{ cursor: 'pointer' }}>
+        <Navbar title="Taskman" mode={mode} toggleBlack={toggleBlack} toggleLight={toggleLight} toggleCyan={toggleCyan} toggleBlue={toggleBlue} toggleYellow={toggleYellow} toggleGreen={toggleGreen} toggleDark={toggleDark} toggleRed={toggleRed} />
+      </div><Alert alert={alert} />
       <div className="container my-3">
         {/* <Routes> */}
         {/* <Route exact path="/about"> */}
         {/* element={<About />} */}
         {/* </Route> */}
         {/* <Route exact path="/"> */}
-        <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
+        <TextForm showAlert={showAlert} heading="Try Taskman - Word Counter ,Character Counter ,Remove extra spaces" mode={mode} />
         {/* </Route> */}
         {/* </Routes> */}
       </div>
